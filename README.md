@@ -8,7 +8,7 @@ Synaesthesia could be explained as entanglement of the senses in most succinct s
 
 This test aspires to recognize people who experince grapheme-color synaesthesia obliviously. Your test results wouldn't make any bold statements whether you experience syaesthesia. They could only give some useful clues. This test is adapted from an experiment conducted by scientists **V.S. Ramachandran ve E.M. Hubbard**. You Content of this test is subject to change particularly from test-takers feedback. If you are interested in their synaesthesia work [click here](http://cbc.ucsd.edu/pdf/Synaesthesia%20-%20JCS.pdf) to read their *Synaesthesia—A Window Into Perception, Thought and Language* titled paper.
 
-![Screenshot](synaesthesia_ss_.png)
+![Screenshot](synaesthesia_ss.png)
 
 ### LICENSE
 
