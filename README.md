@@ -2,7 +2,7 @@
 
 ### Synaesthesia
 
-Synaesthesia could be explained as entanglement of the senses in most succinct sense. Many varieties of this symptom exist such as seeing voices and tasting shapes. Grapheme-color synaesthesia is among the rich set of curious synaesthesia types. More than one percent of the population is estimated to experience it. Check [Wikipedia article](https://en.wikipedia.org/wiki/Synesthesia) for a more thorough account.
+Synaesthesia could be explained as entanglement of the senses in most succinct sense. Many varieties of this symptom exist such as seeing voices and tasting shapes. Grapheme-color synaesthesia is among the rich set of curious synaesthesia types. More than one percent of the population is estimated to experience it. Check out [Wikipedia article](https://en.wikipedia.org/wiki/Synesthesia) for a more thorough account.
 
 ### About Test
 
