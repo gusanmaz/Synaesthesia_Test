@@ -1,0 +1,25 @@
+{{define "File404HTML"}}
+{{template  "HeaderHTML" .}}
+
+<div class="block block-strong" id="div-block-1">
+
+
+{{if eq .Lang "tr"}}
+    <p class="file404-text">
+        İstenilen sayfaya erişilemiyor. Başa dönmek için aşağıdaki düğmeye basınız.
+    </p>
+{{else}}
+    <p class="file404-text">
+        The page you have requested is not available. To start over please press button below.
+    </p>
+{{end}}
+
+    <form id="user-data-form" action="intro.html" method="get" name="user-data-form">
+        <div class="block">
+            <p class="row"><input type="submit" id="start-button" class="col button button-big button-fill" value="{{.StartOverText}}"></p>
+        </div>
+    </form>
+</div>
+
+{{template  "FooterHTML" .}}
+{{end}}

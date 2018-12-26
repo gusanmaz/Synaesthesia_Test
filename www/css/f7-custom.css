@@ -1,0 +1,58 @@
+.md .navbar .title {
+    text-align: center;
+    width: 100%;
+}
+
+.page-content{
+    margin-top: 0;
+    margin-bottom:0
+}
+
+
+#progress-bar-div{
+    margin-top: 0;
+    margin-bottom:0;
+    padding-bottom: 0;
+    padding-top: 0
+}
+
+#progress-bar-text{
+    text-align: center;
+    font-weight: bold
+}
+
+#test-canvas{
+    outline: 0px solid green
+}
+
+#choices-div{
+    margin-top:0px
+}
+
+#question-text{
+    text-align: center;
+    font-weight: bold
+}
+
+#div-block-1{
+    margin-top: 0
+}
+
+#hidden-svg{
+    display:none;
+}
+
+
+.result-header{
+    text-align: center;
+}
+
+.percent-text{
+    font-weight: bold;
+}
+
+.percent-text-top{
+    font-weight: bold;
+    color:orangered;
+}
+

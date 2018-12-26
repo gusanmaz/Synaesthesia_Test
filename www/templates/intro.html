@@ -1,0 +1,47 @@
+{{define "IntroHTML"}}
+{{template  "HeaderHTML" .}}
+
+<div class="block block-strong" id="div-block-1">
+    <!--div class="page-content"-->
+    <p class="segmented segmented-raised segmented-round">
+        <button class="button button-round button-small {{if eq .Lang "en"}}button-active{{end}}" id="en-selector" onclick="switchLang(this)">English</button>
+        <button class="button button-round button-small {{if eq .Lang "tr"}}button-active{{end}}" id="tr-selector" onclick="switchLang(this)">Türkçe</button>
+    </p>
+
+    {{if eq .Lang "tr"}}
+        <p class="intro-text">
+            Sinestezi çok basitçe duyuların birbiri ile karışması durumudur. Sinestezinin sesleri görme, şekillerin tadını alma gibi türleri mevcuttur.
+            Sinestezinin başka bir türü ise harfleri ve kelimeleri renkli görme durumudur. İnsanların en az yüzde birinin bu yetiye sahip olduğu tahmin edilmektedir.
+            <br><br>
+            Bu test, karekterleri renkli görme yetisine (grapheme-color synaesthesia)
+            sahip olup durumundan habersiz kişileri tespit etmeyi amaçlamaktadır. Test sonucunuz sinestezi yetisine sahip olup olmadığınız konusunda kesin bir yargı vermemektedir. Bu test
+            <b>V.S. Ramachandran ve E.M. Hubbard</b> isimli bilimcilerin sinestezi konusunda yaptıkları bir deneyden uyarlanmıştır. Bu testin içeriği sizlerden gelecek
+            onerilere de bağlı olarak ileride değişiklik gösterebilir. Testin içeriği hakkındaki bilgileri okumak ve sonrasında teste başlamak için aşağıdaki butona basınız.
+            <br><br>
+            Bu test ile ilgili öneri ve eleştirileriniz <b>gusanmaz@gmail.com</b> (Güvenç Usanmaz) adresine iletebilirsiniz.
+        </p>
+    {{else}}
+        <p class="intro-text">
+            Synaesthesia could be explained as entanglement of the senses in most succinct sense. Many varieties of this symptom exist such as seeing voices and tasting shapes.
+            Grapheme-color synaesthesia is among the rich set of curious synaesthesia types. More than one percent of the population is estimated to experience it.
+            <br><br>
+            This test aspires to recognize people who experince grapheme-color synaesthesia obliviously. Your test results wouldn't make any bold statements whether you experience syaesthesia.
+            They could only give some useful clues. This test is adapted from an experiment conducted by scientists <b>V.S. Ramachandran ve E.M. Hubbard</b>. Content of this test is subject to change
+            particularly from test-takers feedback. To read about content of the test before start taking the test please press the button below.
+            <br><br>
+            You are welcomed to shoot an email to <b>gusanmaz@gmail.com</b> (Güvenç Usanmaz) for any suggestion or critisim regarding the test.
+        </p>
+    {{end}}
+
+</div>
+
+
+<form id="user-data-form" action="about_test.html" method="post" name="user-data-form"> <!-- action was initTest -->
+    <input type="hidden" id="lang-data" value={{.Lang}} name="lang" />
+    <div class="block block-strong">
+        <p class="row"><input type="submit" id="start-button" class="col button button-big button-fill" value="{{.ContinueText}}"></p>
+    </div>
+</form>
+
+{{template  "FooterHTML" .}}
+{{end}}

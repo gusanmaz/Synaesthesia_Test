@@ -1,0 +1,42 @@
+{{define "AboutTestHTML"}}
+        {{template  "HeaderHTML" .}}
+
+                <!-- Scrollable page content -->
+                <div class="block block-strong" id="div-block-1">
+
+
+        {{if eq .Lang "tr"}}
+                <p id="en-text" class="about-test-text" >
+                    Bu test 10 farklı sorudan oluşmaktadır. Her soruda ekranı kaplayan büyük bir kare içinde 2 farklı türde çok sayıda karakter görecekseniz. Sizden bu iki karekterden
+                    daha az sayıda bulunan karekterin kaç yerde gözüktüğünü tespit etmeniz istenmektedir. Sorulara mümkün olan en kısa sürede doğru cevap vermeye çalışın. Yanlış
+                    cevap verdiğiniz soruların benzerleri sizden doğru cevap gelene kadar sorulacaktır. Dolayısıyla soruları dikkatsiz cevaplamanız durumunda 10 sorudan daha fazla
+                    soru cevaplamanız gerekebilir.
+                    <br><br>
+                    Tek numaraları sorular (1,3,5,7,9 nolu) reaksiyonlarınız ne kadar hızlı olduğunu, diğer sorular da sinestezi yetiniz ölçmeyi amaçlamaktadır.
+                    Teste başladıktan sonra ara vermeden bitirmeniz gerekmektedir. Şimdi derin bir nefes alın :) Kendinizi hazır hissetiğinizde teste başlamak için
+                    aşağıdaki butona tıklayınız.
+                </p>
+        {{else}}
+                <p id="tr-text" class="about-test-text">
+                    This test consists of 10 different questions. In each question you will see many characters of two kind scattered in a large square. For instance you could see
+                    many 1's and 7's scattered in the square. You are asked to count the number of occurence of less populous character in the square. Please try to answer each
+                    question as quickly as possible without sacrificing correctness of your answer. Every incorrectly answered question is asked again slightly modified until answered correctly.
+                    Consequenty you may end up answering more than 10 questions to complete the test if you are sloppy.
+                    <br><br>
+                    Odd numbered questions (1st,3rd,5th,7th and 9th) aspire to measure your reaction time and other half of the questions aspires to measure your synaesthesia. Once you start
+                    test you should complete the test without an interval. Now take a deep breathe! Whenever you feel ready press the button below to start the test.
+                </p>
+        {{end}}
+
+                </div>
+
+
+                <form id="user-data-form" action="initTest" method="post" name="user-data-form">
+                    <input type="hidden" id="lang-data" value="{{.Lang}}" name="lang" />
+                    <div class="block">
+                        <p class="row"><input type="submit" id="start-button" data-tr="Basla!" data-en="Start!" class="col button button-big button-fill" value="{{.StartTestText}}"></p>
+                    </div>
+                </form>
+
+        {{template  "FooterHTML" .}}
+{{end}}

@@ -1,0 +1,108 @@
+{{define "UserHTML"}}
+{{template  "HeaderHTML" .}}
+
+<div class="block block-strong" id="div-block-1">
+{{if eq .Lang "tr"}}
+    <p class="user-text">
+        Sonuçları görmek için son olarak hakkınızda biraz bilgi sahibi olmak istiyoruz. Eğer kişisel bilgilerinizi paylaşmak
+        istemiyorsanız `Bilgi paylaşmak istemiyorum` düğmesine basıp test sonuçlarınıza ulaşabilirsiniz.
+    </p>
+{{else}}
+    <p class="user-text">
+        Before reporting your test results we kindly ask for some personal information. If you don't want to share any
+        personal details with us you could just press to `Do not submit personal data` button.
+    </p>
+{{end}}
+</div>
+            <!-- Login form -->
+            <form id="user-data-form" action="results.html" method="post" name="user-data-form">
+                <div class="list no-hairlines">
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">
+                                    {{.EmailLabel}}
+                                </div>
+                                <div class="item-input-wrap">
+                                    <input type="email" name="email" placeholder="{{.EmailPlaceholder}}" required validate>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">
+                                    {{.NameLabel}}
+                                </div>
+                                <div class="item-input-wrap">
+                                    <input type="text" name="name" placeholder="{{.NamePlaceholder}}" required>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label" style="padding-bottom: 5px">
+                                    {{.AgeLabel}}
+                                </div>
+                                <div class="item-input-wrap">
+                                    <input type="text" name="age" placeholder="{{.AgePlaceholder}}" required validate pattern="[0-9]{1,2}" data-error-message="{{.AgeErrorMessage}}">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">
+                                    {{.GenderLabel}}
+                                </div>
+                                <div class="item-input-wrap">
+                                    <div class="list" style="margin:0">
+                                        <ul style="padding-left: 0px">
+                                            <li>
+                                                <label class="item-radio item-content">
+                                                    <input type="radio" name="gender" value="male" checked />
+                                                    <i class="icon icon-radio"></i>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">{{.Male}}</div>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="item-radio item-content">
+                                                    <input type="radio" name="gender" value="female"/>
+                                                    <i class="icon icon-radio"></i>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">{{.Female}}</div>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="block">
+                    <p class="row"><input type="submit" class="col button button-big button-fill" value="{{.SubmitData}}"></p>
+                </div>
+            </form>
+
+            <div class="block block-strong">
+                <div class="row">
+                    <button class="col button button-raised" onclick="location.href='results.html'">{{.SubmitAnonymousData}}</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js">
+</script> <!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.js">
+</script> <!-- Path to your app js-->
+<script type="text/javascript" src="js/f7-init.js">
+</script>
+</body>
+</html>
+{{end}}

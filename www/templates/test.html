@@ -1,0 +1,34 @@
+{{define "TestHTML"}}
+{{template  "HeaderHTML" .}}
+
+
+<!--FIXME Not so elegant but found no better solution than loading all the svg files beforehand so that no perceptible delay occurs on rendering characters  selected from 2 svg files.-->
+<img src="assets/digits/green2.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/green6.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/greeny.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/gray2.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/gray4.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/gray5.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/gray6.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/gray8.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/grayy.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/blue4.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/blue5.svg" id="hidden-svg" class="hidden">
+<img src="assets/digits/blue8.svg" id="hidden-svg" class="hidden">
+
+<div class="block block-strong" id="progress-bar-div">
+    <p><span id="progress-bar-graphics" data-progress = "0" class="progressbar" ></span></p>
+    <p id = "progress-bar-text"></p>
+</div>
+
+<div class="block block-strong" style="margin-top: 0; margin-bottom:0; padding-bottom: 0; text-align:center">
+    <svg width = "90%"  viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id = "test-canvas"></svg>
+</div>
+
+<div class="block block-strong" id="choices-div">
+    <p id="question-text"></p>
+    <div class="row" id = "choice_button_container">
+    </div>
+</div>
+{{template  "FooterHTML"}}
+{{end}}

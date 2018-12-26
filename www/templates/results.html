@@ -1,0 +1,82 @@
+{{define "ResultsHTML"}}
+{{template  "HeaderHTML" .}}
+
+<!-- Scrollable page content -->
+<div class="block block-strong" id="div-block-1">
+{{if eq .Lang "en"}}
+    <h3 class="result-header" >You are at the top <span class="percent-text-top">{{.TopPercent}}%</span> of the test takers.</h3>
+    <p>The smaller the percentage value, the higher the chances you may experience synaesthesia.</p>
+        <h3 class="result-header" >More Details</h3>
+    <p>You are faster than <span class="percent-text">{{.MultiPercent}}%</span> of the test takers in questions where different characters are
+        colored differently.
+    </p>
+        <p>
+            You are faster than <span class="percent-text">{{.SinglePercent}}%</span> of the test takers in questions where different characters are
+        colored same.
+        </p>
+        <p>
+        Your average response time for questions where different characters are
+            colored differently are <span class="percent-text">{{.SubjectRatio}}</span> times faster
+        than average response time for where different characters are colored same.
+        Smaller ratio values (close to 1 or even smaller than 1) could be interpreted as having symptoms
+        for synaesthesia.
+        </p>
+
+    <form id="user-data-form" action="index.html" method="get" name="user-data-form">
+        <div class="block block-strong">
+            <p class="row"><input type="submit" id="start-button" class="col button button-big button-fill" value="Solve the test again"></p>
+        </div>
+    </form>
+
+
+        <h3 class="result-header" >Social</h3>
+
+    <button class="button" data-sharer="twitter" data-title="Test Your Synaesthesia!" data-url="https://www.gusanmaz.me/st/"/>Share on Twitter</button>
+        <button class="button" data-sharer="facebook"  data-title="Test Your Synaesthesia!" data-url="https://www.gusanmaz.me/st/">Share on Facebook</button>
+
+        <button class="button" data-sharer="whatsapp" data-title="Test Your Synaesthesia!" data-url="https://www.gusanmaz.me/st/"/>Share on Whatsapp</button>
+
+        <button class="button" data-sharer="pocket" data-title="Test Your Synaesthesia!" data-url="https://www.gusanmaz.me/st/"/>Share on Pocket</button>
+
+{{end}}
+
+{{if eq .Lang "tr"}}
+    <h3 class="result-header" >Testi çözenler içinde en iyi %{{.TopPercent}} içindesiniz.</h3>
+    <p>Bu yüzdenin değerinin düşük çıkması (yüzde 5 ve altı) sinestezi yetisinin varlığı konusunda bir işaret olabilir.</p>
+    <h3 class="result-header" >Ayrıntılar</h3>
+    <p>
+        Karakterlerin iki farklı renkte gösterildiği sorulardaki ortalama cevaplama süreniz, Karakterlerin tek
+        renkte gösterildiği sorulardaki ortalama cevaplama sürenizden <span class="percent-text">{{.SubjectRatio}}</span> kat daha hızlı. Bu
+        oranın küçük çıkması (1'e yakın ve hatta 1'den küçük) sinestezi yetisine sahip olduğunuz anlamına gelebilir.
+    </p>
+    <p> Karakterlerin iki farklı renkte gösterildiği sorularda, testi çözen kişilerin <span class="percent-text">%{{.MultiPercent}}</span>'sından
+        daha iyi bir performans gosterdiniz.
+    </p>
+        Karakterlerin tek bir renkte gösterildiği testlerde, testi çözen kişilerin <span class="percent-text">%{{.SinglePercent}}</span>'sından
+        daha iyi bir performans gosterdiniz.
+    </p>
+
+    <form id="user-data-form" action="index.html" method="get" name="user-data-form">
+        <div class="block block-strong">
+            <p class="row"><input type="submit" id="start-button" class="col button button-big button-fill" value="Testi yeniden çöz"></p>
+        </div>
+    </form>
+
+
+    <h3 class="result-header">Sosyal Medya</h3>
+
+    <button class="button" data-sharer="twitter" data-title="Sinestezi misin?" data-url="https://www.gusanmaz.me/st/"/>Twitter'da Paylaş</button>
+
+    <button class="button" data-sharer="facebook"  data-title="Sinestezi misin?" data-url="https://www.gusanmaz.me/st/">Facebook'da Paylaş</button>
+
+    <button class="button" data-sharer="whatsapp" data-title="Sinestezi misin?" data-url="https://www.gusanmaz.me/st/"/>Whatsapp'da Paylaş</button>
+
+    <button class="button" data-sharer="pocket" data-title="Sinestezi misin?" data-url="https://www.gusanmaz.me/st/"/>Pocket'da Paylaş</button>
+
+
+{{end}}
+
+</div>
+
+{{template  "FooterHTML"}}
+{{end}}

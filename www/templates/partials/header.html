@@ -1,0 +1,55 @@
+{{define "HeaderHTML"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <!--meta name="theme-color" content="#2196f3"-->
+    <!-- Your app title -->
+    <title>
+        {{.TestTitle}} - {{.PageTitle}}
+    </title>
+
+    <link rel="image/svg+xml" href="assets/digits/blue8.svg">
+
+
+    <!--FIXME Doesn't work as expected -->
+    <!--link rel="preload" href="assets/digits/greeen2.svg" as="image">
+    <link rel="preload" href="assets/digits/greeen6.svg" as="image">
+    <link rel="preload" href="assets/digits/greeeny.svg" as="image">
+    <link rel="preload" href="assets/digits/gray2.svg" as="image">
+    <link rel="preload" href="assets/digits/gray4.svg" as="image">
+    <link rel="preload" href="assets/digits/gray5.svg" as="image">
+    <link rel="preload" href="assets/digits/gray6.svg" as="image">
+    <link rel="preload" href="assets/digits/gray8.svg" as="image">
+    <link rel="preload" href="assets/digits/grayy.svg" as="image">
+    <link rel="preload" href="assets/digits/blue4.svg" as="image">
+    <link rel="preload" href="assets/digits/blue5.svg" as="image">
+    <link rel="preload" href="assets/digits/blue8.svg" as="image">
+
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/f7-custom.css">
+</head>
+<body>
+
+<div id="app" class="color-theme-green">
+    <div class="view view-main">
+        <div class="page" >
+            <div class="navbar" >
+                <div class="navbar-inner">
+                    <div class="title" style="text-align:center">
+                            {{.TestTitle}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="block block-strong" style="margin-top: 0; margin-bottom:0">
+                    <h3 style="text-align: center;">{{.PageTitle}}</h3>
+                </div>
+{{end}}

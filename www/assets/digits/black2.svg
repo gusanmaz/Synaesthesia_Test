@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="600">
+<path fill="black" d="M22 19.5L42 0L278 0L298 19.5L278 39L42 39Z"/>
+<path fill="black" d="M22 299.5L42 280L278 280L298 299.5L278 319L42 319Z"/>
+<path fill="black" d="M22 579.5L42 560L278 560L298 579.5L278 599L42 599Z"/>
+<path fill="black" d="M299.5 22L280 42L280 277.5L299.5 297.5L319 277.5L319 42Z"/>
+<path fill="black" d="M 19.5 302L0 322L0 557.5L19.5 577.5L39 557.5L39 322Z"/>
+</svg>

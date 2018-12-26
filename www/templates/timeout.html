@@ -1,0 +1,28 @@
+{{define "TimeoutHTML"}}
+{{template  "HeaderHTML" .}}
+
+<div class="block block-strong" id="div-block-1">
+
+
+{{if eq .Lang "tr"}}
+    <p class="timeout-text">
+       Son soruyu {{.InactiveMinutes}} dakikadan uzun sürede cevapladınız.
+        Zaman aşımı nedeniyle bu souya verdiğiniz cevap kabul edilmedi. Önceki sorunun yerine sizden cevaplamanız
+        istenen soruyu görmek için aşağıdaki düğmeye tıklayınız.
+    </p>
+{{else}}
+    <p class="timeout-text">
+        Oops, your answer to this question took more than {{.InactiveMinutes}} minutes to answer.
+    Your answer to this question is discarded and you will be asked a similar question when you press the button below.
+    </p>
+{{end}}
+
+    <form id="user-data-form" action="initTest" method="get" name="user-data-form">
+        <div class="block">
+            <p class="row"><input type="submit" id="start-button" class="col button button-big button-fill" value="{{.StartOverText}}"></p>
+        </div>
+    </form>
+</div>
+
+{{template  "FooterHTML" .}}
+{{end}}

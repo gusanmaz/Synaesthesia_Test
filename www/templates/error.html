@@ -1,0 +1,26 @@
+{{define "ErrorHTML"}}
+{{template  "HeaderHTML" .}}
+
+<div class="block block-strong" id="div-block-1">
+
+
+{{if eq .Lang "tr"}}
+    <p class="error-text">
+       Eyvah, beklenmedik birşey oldu. Çerezleri sildiğin veya onlarla oynadığın veya bilemediğimiz başka bir nedenle bu sayfaya erişmiş olabilirsin. Teste yeniden başlamak için
+        alttaki düğmeye tıklayabilirsin.
+    </p>
+{{else}}
+    <p class="error-text">
+        Oops, something went wrong :( You may have reached because you deleted cookies or messed with them up or something else. To start over the test please click the button below.
+    </p>
+{{end}}
+
+    <form id="user-data-form" action="intro.html" method="get" name="user-data-form">
+        <div class="block">
+            <p class="row"><input type="submit" id="start-button" data-tr="Basla!" data-en="Start!" class="col button button-big button-fill" value="{{.StartOverText}}"></p>
+        </div>
+    </form>
+</div>
+
+{{template  "FooterHTML" .}}
+{{end}}
